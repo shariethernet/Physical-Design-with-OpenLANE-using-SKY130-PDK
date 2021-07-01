@@ -122,7 +122,7 @@ Set the package required by OpenLane.\
 
 ![OpenLane 1](https://github.com/shariethernet/Physical-Design-with-OpenLANE-using-SKY130-PDK/blob/main/images/o1.png)
 
-Prepare the design
+### Prepare the design
 
 ```prep -design picorv32a```
 
@@ -130,7 +130,9 @@ A runs folder is created as discussed
 
 ![Preparation](https://github.com/shariethernet/Physical-Design-with-OpenLANE-using-SKY130-PDK/blob/main/images/prep.png)
 
-Run the synthesis
+### Run the synthesis and STA
+
+The below command invokes yosys and runs the synthesis. GTech mapping is done where the modules are mapped to generic cells. abc does the technology mapping. OpenSTA runs the Static Timing Analysis and produces the STA Report 
 
 ```run_synthesis```
 
