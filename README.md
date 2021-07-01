@@ -99,11 +99,13 @@ Open the openlane directory
  - The ```scripts``` folder contains all the automation scripts used by OpenLane
  -  Open in the ```pdk``` folder contains three sub folders. 
  - ```skywater-pdk``` is by defaukt not configured to work with opensource tools. So OpenLane provides ```open_pdk``` and ```Sky130A``` directory which has the configuration files for each of the tools used in the OpenLane flow
+ 
  ![pdk directory](https://github.com/shariethernet/Physical-Design-with-OpenLANE-using-SKY130-PDK/blob/main/images/sky130a.PNG)
 
 ### Design folder
- Consider the picorv32a design. Upon design preparation a runs folder is added. Within the folder containing the date resides the configuration, results, reports and other files that are use in the run
- ![Design](https://github.com/shariethernet/Physical-Design-with-OpenLANE-using-SKY130-PDK/blob/main/images/design2.PNG)
+ Consider the picorv32a design. Upon design preparation a runs folder is added. Within the folder containing the date resides the configuration, results, reports and other files that are use in the run. 
+ 
+![Design](https://github.com/shariethernet/Physical-Design-with-OpenLANE-using-SKY130-PDK/blob/main/images/design2.PNG)
 
 ## Working with OpenLane
 Go the the openlane directory and type ```docker``` to start the docker containter
