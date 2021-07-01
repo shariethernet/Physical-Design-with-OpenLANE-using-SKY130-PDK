@@ -108,11 +108,11 @@ Open the openlane directory
 ![Design](https://github.com/shariethernet/Physical-Design-with-OpenLANE-using-SKY130-PDK/blob/main/images/design2.PNG)
 
 ## Working with OpenLane
-Go the the openlane directory and type ```docker``` to start the docker containter
-The terminal changes into the docker instance
-Open the OpenLane in interactive mode
+Go the the openlane directory and type ```docker``` to start the docker containter.
+The terminal changes into the docker instance.
+Open the OpenLane in interactive mode.
 ```./flow.tcl -interactive```
-Set the package required by OpenLane
+Set the package required by OpenLane.
 ```package require openlane 0.9```
 
 ![OpenLane 1](https://github.com/shariethernet/Physical-Design-with-OpenLANE-using-SKY130-PDK/blob/main/images/o1.png)
