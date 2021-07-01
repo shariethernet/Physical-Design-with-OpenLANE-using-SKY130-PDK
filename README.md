@@ -139,3 +139,5 @@ Run the synthesis
 View the synthesis statistics
 
 ![Synthesis stats](https://github.com/shariethernet/Physical-Design-with-OpenLANE-using-SKY130-PDK/blob/main/images/synthstat.png)
+
+The STA Reports can be viewed from the Reports folder.
