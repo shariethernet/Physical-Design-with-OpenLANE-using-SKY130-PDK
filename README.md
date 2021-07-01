@@ -109,10 +109,15 @@ Open the openlane directory
 
 ## Working with OpenLane
 Go the the openlane directory and type ```docker``` to start the docker containter.\
+
 The terminal changes into the docker instance.\
+
 Open the OpenLane in interactive mode.\
+
 ```./flow.tcl -interactive```\
+
 Set the package required by OpenLane.\
+
 ```package require openlane 0.9```
 
 
