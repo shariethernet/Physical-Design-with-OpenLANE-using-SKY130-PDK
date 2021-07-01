@@ -66,23 +66,24 @@ The routed .def file is used my Magic to generate the GDSII file
 
 ## OpenLane Installation and Environment Setup
 Refer
-- [Efabless GIthub](https://github.com/The-OpenROAD-Project/OpenLane)   or
-- [OpenLane build Script by Nikson Jose](https://github.com/nickson-jose/openlane_build_script)
-- The above repository can be followed if the installation is done on a VirtualMachine/Linux 
-- The following steps are required to  **run OpenLane inWindows Subsystem for Linux (WSL1)** before installation of OpenLANE
-		1. Enable WSL1 -  [Reference](https://docs.microsoft.com/en-us/windows/wsl/install-win10) 
-		2. Install VSCode and RemoteWSL Extension
-		3. Connect to the WSL and open the folder in WSL
-		4. Download and Install [VcXserv](https://sourceforge.net/projects/vcxsrv/) to run GUI Applications
-		5. Start VcXserv. Check the "Disable access control box"
-		6. Set the Display number as 0 (or anynumber)
-		7. In WSL terminal use the command`export DISPLAY=:0`
-		8. Install [Docker Desktop](https://www.docker.com/products/docker-desktop) in windows
-		9. Enable the below option
-		![Docker Setup](https://github.com/shariethernet/Physical-Design-with-OpenLANE-using-SKY130-PDK/blob/main/images/docker1.png) 
-	   10. Follow [this](https://nickjanetakis.com/blog/setting-up-docker-for-windows-and-wsl-to-work-flawlessly) and install docker dependencies inside WSL
-	   11. Every time start docker in WSL to use the docker in windows exposed on the port 2375 using this command
-	   ```echo "export DOCKER_HOST=tcp://localhost:2375" >> ~/.bashrc && source ~/.bashrc```
-	   This must be done everytime before trying to OpenLane
-	   12. Use ```docker info``` to check the status
-	   13. This installation can also be done on a remote Linux instance and Putty can be used with X11 fowarding configured to ```localhost:0``` with VcXsrv installed in the host machine with Display number set to 0.
+ - [Efabless GIthub](https://github.com/The-OpenROAD-Project/OpenLane)   or
+ - [OpenLane build Script by Nikson Jose](https://github.com/nickson-jose/openlane_build_script)
+ - The above repository can be followed if the installation is done on a VirtualMachine/Linux 
+ - The following steps are required to  **run OpenLane inWindows Subsystem for Linux (WSL1)** before installation of 
+ - OpenLANE Enable WSL1 - 
+	 - [Reference](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
+	 - Install VSCode and RemoteWSL Extension 
+	 - Connect to the WSL and open  the folder in WSL 
+	 - Download and Install  [VcXserv](https://sourceforge.net/projects/vcxsrv/) to run GUI Applications
+	 -  Start VcXserv. Check the "Disable access control box" 
+	 -   Set the Display number as 0 (or anynumber)  In WSL terminal use the  command`export DISPLAY=:0`  
+	 -  Install [Docker Desktop](https://www.docker.com/products/docker-desktop) in windows 
+	 -    Enable the below option 		
+	 - ![Docker  Setup](https://github.com/shariethernet/Physical-Design-with-OpenLANE-using-SKY130-PDK/blob/main/images/docker1.png)
+	 - Follow [this](https://nickjanetakis.com/blog/setting-up-docker-for-windows-and-wsl-to-work-flawlessly) and install docker dependencies inside WSL
+	 -    Every time start docker   in WSL to use the docker in windows exposed on the port 2375 using  this command
+     	   ```echo "export DOCKER_HOST=tcp://localhost:2375" >> ~/.bashrc && source ~/.bashrc```
+		   This must be done everytime before trying to OpenLane 
+		    Use ```docker info``` to check the status 
+		    
+    This installation can also be  done on a remote Linux instance and Putty can be used with X11 fowarding configured to ```localhost:0``` with VcXsrv installed in   the host machine with Display number set to 0.
