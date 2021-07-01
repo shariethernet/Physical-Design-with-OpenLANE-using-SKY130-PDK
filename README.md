@@ -120,5 +120,22 @@ Set the package required by OpenLane.\
 
 ```package require openlane 0.9```
 
-
 ![OpenLane 1](https://github.com/shariethernet/Physical-Design-with-OpenLANE-using-SKY130-PDK/blob/main/images/o1.png)
+
+Prepare the design
+
+```prep -design picorv32a```
+
+A runs folder is created as discussed
+
+![Preparation](https://github.com/shariethernet/Physical-Design-with-OpenLANE-using-SKY130-PDK/blob/main/images/prep.png)
+
+Run the synthesis
+
+```run_synthesis```
+
+![synthesis complete](https://github.com/shariethernet/Physical-Design-with-OpenLANE-using-SKY130-PDK/blob/main/images/synth.png)
+
+View the synthesis statistics
+
+![Synthesis stats](https://github.com/shariethernet/Physical-Design-with-OpenLANE-using-SKY130-PDK/blob/main/images/synthstat.png)
