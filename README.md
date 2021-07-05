@@ -646,7 +646,7 @@ The GDSII file is generated in the `results/magic` directory
 ## References
 
 - [Openlane](https://github.com/The-OpenROAD-Project)
-- Opencircuitdesign.com
+- [Opencircuitdesign](https://Opencircuitdesign.com)
 - [Skywater](https://skywater-pdk.readthedocs.io/)
 
 
