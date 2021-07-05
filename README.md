@@ -1,6 +1,58 @@
 # Physical Design with OpenLane using SKY130 PDK
 ## Table of Contents
 
+  * [Introduction](#introduction)
+  * [Overall Design Flow](#overall-design-flow)
+  * [OpenLane Flow](#openlane-flow)
+    + [1.  Synthesis](#1--synthesis)
+    + [1.1 Synthesis Strategies](#11-synthesis-strategies)
+    + [1.2 Deign Exploration Utility](#12-deign-exploration-utility)
+    + [1.3 Design For Test - DFT Insertion](#13-design-for-test---dft-insertion)
+    + [2. Floor Planning and Power Planning](#2-floor-planning-and-power-planning)
+    + [3. Placement](#3-placement)
+    + [4. Clock Tree Synthesis](#4-clock-tree-synthesis)
+    + [5. Fake Antenna and diode swapping](#5-fake-antenna-and-diode-swapping)
+    + [5. Routing](#5-routing)
+    + [6. RC Extraction](#6-rc-extraction)
+    + [7. STA](#7-sta)
+    + [8. Sign-off Steps](#8-sign-off-steps)
+    + [9. GDSII Extraction](#9-gdsii-extraction)
+  * [OpenLane Installation and Environment Setup](#openlane-installation-and-environment-setup)
+  * [OpenLane Directory Structure](#openlane-directory-structure)
+  * [Working with OpenLane](#working-with-openlane)
+    + [Start Openlane](#start-openlane)
+    + [Design Preparation](#design-preparation)
+    + [Configuration Priority](#configuration-priority)
+  * [Synthesis](#synthesis)
+    + [Key concepts](#key-concepts)
+      - [Utilisation Factor](#utilisation-factor)
+       + [Aspect Ratio](#aspect-ratio)
+  * [Floorplanning](#floorplanning)
+    + [Pre-Placed cells](#pre-placed-cells)
+    + [Decoupling Capacitors to the pre placed cells](#decoupling-capacitors-to-the-pre-placed-cells)
+    + [Power Planning](#power-planning)
+    + [Pin Placement](#pin-placement)
+    + [Floorplanning - Openlane](#floorplanning---openlane)
+  * [Placement](#placement)
+ * [Cell Design Flow](#cell-design-flow)
+      - [SPICE Deck Creation](#spice-deck-creation)
+      - [Simulation in ngspce](#simulation-in-ngspce)
+      - [VTC](#vtc)
+      - [VTC with 2.5 x W (@.5 times channel width of pmos](#vtc-with-25-x-w---5-times-channel-width-of-pmos-)
+      - [Transient Simulation](#transient-simulation)
+ * [Custom Design of SKY130 Standard cell](#custom-design-of-sky130-standard-cell)
+      - [SPICE Characterisation](#spice-characterisation)
+      - [LEF Extraction](#lef-extraction)
+  * [Synthesis, Floorplanning with custom standard cell](#synthesis--floorplanning-with-custom-standard-cell)
+  * [Static Timing Analysis](#static-timing-analysis)
+  * [Floorplanning and Placement](#floorplanning-and-placement)
+  *  [CTS](#cts)
+  * [Pre-CTS Timing Analysis in OpenRoad](#pre-cts-timing-analysis-in-openroad)
+* [PDN and Routing](#pdn-and-routing)
+* [GDSII](#gdsii)
+* [Acknowledgements](#acknowledgements)
+* [References](#references)
+
 ## Introduction
 With the advent of open-source technologies for Chip development, there were several RTL designs, EDA Tools which were open-sourced. The missing piece in a complete Open source chip development was filled by the [SKY130 PDK](https://skywater-pdk.readthedocs.io/en/latest/rules.html) from Skywater Technologies and Google.  There were several EDA Tools, which played specfic roles in the design cycle. There was not a clean design flow and Skywater pdk was compatible with only the industrty tools.  [OpenLane](https://github.com/The-OpenROAD-Project/OpenLane) addressed these issues in providing a completely automated and clean RTL to GDSII flow. OpenLane is not a tool, but a flow which consists of several EDA tools, automation scripts and Skywater-pdks tuned to work specifically with the open-source EDA tools.     
 
@@ -588,7 +640,7 @@ The GDSII file is generated in the `results/magic` directory
 
 - [Tim Edwards, eFabless](http://opencircuitdesign.com/~tim/)
 
-## Refereces
+## References
 
 - [Openlane](https://github.com/The-OpenROAD-Project)
 - Opencircuitdesign.com
