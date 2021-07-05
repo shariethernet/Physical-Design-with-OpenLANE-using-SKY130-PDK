@@ -637,7 +637,7 @@ The GDSII file is generated in the `results/magic` directory
 
 Opening the GDSII file in `klayout`
 
-![](./images/gds2out.PNG)
+![](./images/gdsout.PNG)
 
 ## Acknowledgements
 
