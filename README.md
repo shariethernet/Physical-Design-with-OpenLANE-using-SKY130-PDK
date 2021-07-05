@@ -232,14 +232,14 @@ Let us change the `VMETAL` and `HMETAL` Layers
 
 [Right: Modifed Configuration in design, Left: Default Config in openlane]
 
-![config](./images/floorplanconfig.png)
+![config](./images/floorplanconfig.PNG)
 
 Run the floorplan
 
 ![](./images/fp1.png)
 
 Configuration reflected in the runs folder
-![runconfig](./images/fprun.png)
+![runconfig](./images/fprun.PNG)
 
 This command generated the `picorv32a.floorplan.def` file in the `./results/floorplan` directory
 
