@@ -635,6 +635,10 @@ In openLane use the command `run_magic`
 
 The GDSII file is generated in the `results/magic` directory
 
+Opening the GDSII file in `klayout`
+
+![](./images/gds2out.PNG)
+
 ## Acknowledgements
 
 - [Kunal Gosh, Founder, VSD Corporation](https://github.com/kunalg123)
