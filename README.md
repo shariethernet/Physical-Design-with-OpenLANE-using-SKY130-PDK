@@ -41,7 +41,7 @@ This project is done in the course ["Advanced Physical Design using OpenLANE/Sky
       - [SPICE Deck Creation](#spice-deck-creation)
       - [Simulation in ngspce](#simulation-in-ngspce)
       - [VTC](#vtc)
-      - [VTC with 2.5 x W (@.5 times channel width of pmos](#vtc-with-25-x-w---5-times-channel-width-of-pmos-)
+      - [VTC with 2.5 x W (2.5 times channel width of pmos](#vtc-with-25-x-w---5-times-channel-width-of-pmos-)
       - [Transient Simulation](#transient-simulation)
  * [Custom Design of SKY130 Standard cell](#custom-design-of-sky130-standard-cell)
       - [SPICE Characterisation](#spice-characterisation)
