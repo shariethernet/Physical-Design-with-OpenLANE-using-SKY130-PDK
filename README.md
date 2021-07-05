@@ -639,6 +639,8 @@ Checking DRC using `run_magic_drc`
 
 ![](./images/drcf.png)
 
+No DRC errors are found
+
 Opening the GDSII file in `klayout`
 
 ![](./images/gdsout.PNG)
