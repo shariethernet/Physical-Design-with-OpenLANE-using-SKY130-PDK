@@ -616,7 +616,7 @@ Def file after CTS
 - `gen_pdn` - Generate the Power Distribution network
 - `run_routing` - To start the routing
 
-![](./images/routing.png)
+![](./images/routing.PNG)
 
 - The routing has been complted without any DRC violations.
 - RC Extraction is done and the SPEF File is generated in the `picorv32a/runs/03-07_16-12/results/routing/picorv32a.spef`
@@ -637,7 +637,7 @@ The GDSII file is generated in the `results/magic` directory
 
 Checking DRC using `run_magic_drc`
 
-![](./images/drcf.png)
+![](./images/drcf.PNG)
 
 No DRC errors are found
 
