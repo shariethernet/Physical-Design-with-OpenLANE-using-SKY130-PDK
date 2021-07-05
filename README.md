@@ -635,6 +635,10 @@ In openLane use the command `run_magic`
 
 The GDSII file is generated in the `results/magic` directory
 
+Checking DRC using `run_magic_drc`
+
+![](./images/drcf.png)
+
 Opening the GDSII file in `klayout`
 
 ![](./images/gdsout.PNG)
