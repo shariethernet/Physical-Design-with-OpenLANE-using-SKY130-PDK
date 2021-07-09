@@ -564,7 +564,6 @@ To avoid errors follow the below steps to perform the floorplan and placement
 1. `place_io`
 1. `global_placement_or`
 1. `detailed_placement`
-1. `detailed_placement`
 1. `tap_decap_or`
 1. `detailed_placement`
 
