@@ -51,7 +51,8 @@ This project is done in the course ["Advanced Physical Design using OpenLANE/Sky
   * [Floorplanning and Placement](#floorplanning-and-placement)
   *  [CTS](#cts)
   * [Pre-CTS Timing Analysis in OpenRoad](#pre-cts-timing-analysis-in-openroad)
-* [PDN and Routing](#pdn-and-routing)
+* [PDN](#pdn)
+* [Routing](#Routing)
 * [GDSII](#gdsii)
 * [Acknowledgements](#acknowledgements)
 * [References](#references)
@@ -620,7 +621,7 @@ Def file after CTS
 
 ![](./images/cts.png)
 
-### PDN and Routing
+### PDN
 
 - `gen_pdn` - Generate the Power Distribution network
 - The power distrubution network has to take the `design_cts.def` as the input def file.
@@ -632,11 +633,18 @@ Def file after CTS
 - Now the power has to be supplied from the straps to the standard cells. The straps are connected to the `rails` of the standard cells
 - If macros are present then the straps attach to the `rings` of the macros via the `macro pads` and the pdn for the macro is pre-done.
 - There are definitions for the straps and the railss. In this design straps are at metal layer 4 and 5 and the standard cell rails are at the metal layer 1. Vias connect accross the layers as required.
+
+### Routing
+
 - `run_routing` - To start the routing
 - The options for routing can be set in the `config.tcl` file. 
 - The optimisations in routing can also be done by specifying the routing strategy to use different version of `TritonRoute Engine`. There is a trade0ff between the optimised route and the runtime for routing.
 - For the default setting picorv32a takes approximately 30 minutesaccording to the current version of TritonRoute.
 - This routing stage must have the `CURRENT_DEF` set to `pdn.def`
+- The two stages of routing are performed by the following engines
+    - Global Route : Fast Route
+    - Detailed Route : Triton Route
+- Fast Route generates the routing guides, whereas Triton Route uses the Global Route and then completes the routing with some strategies and optimisations for finding the best possible path connect the pins.
 
 ![](./images/routing.PNG)
 
