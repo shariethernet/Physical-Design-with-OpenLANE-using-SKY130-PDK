@@ -192,6 +192,16 @@ Prepare the design
 - To overwrite the previous run use `tag run_name -overwrite`
 - *Note*: Any configuration done in the `config.tcl` of the source folder after design preparation will not be refleceted. To run wih a modified configuration, the design configuration can be overriten by passing the configuration to openlane interactively
 - A runs folder is created as discussed
+- On loading a previous run, to know the last run state one has to check the Current def file which is set. This can be done using
+```zsh
+echo $::env(CURRENT_DEF)
+```
+- To set to resume from a stage before the current DEF , one has to set the ```CURRENT_DEF``` environment variable to the required path. This can be done using
+```tcl
+set ::env(CURRENT_DEF) /path/to/the/required/def/file
+```
+- The `def` files of every  stage can be found in the `runs>results>stage_name>design_stage.def` path. 
+- These `def` files can be opened with `magic` by using the `sky130A.tech` as the technology file and the `lef` file from the `tmp` directory if required.
 
 ![Preparation](./images/prep.png)
 
