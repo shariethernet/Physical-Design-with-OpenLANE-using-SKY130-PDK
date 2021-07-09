@@ -623,7 +623,20 @@ Def file after CTS
 ### PDN and Routing
 
 - `gen_pdn` - Generate the Power Distribution network
+- The power distrubution network has to take the `design_cts.def` as the input def file.
+- This will create the grid and the straps for the Vdd and the ground. These are placed around the standard cells.
+- The standard cells are designed such that it's height is multiples of the space between the Vdd and the ground rails. Here, the pitch is `2.72`. Only if the above conditions are adhered it is possible to power the standard cells.
+- The power to the chip, enters through the `power pads`. There is each for Vdd and Gnd
+- From the pads, the power enters the `rings`, through the `via`
+- The `straps` are connected to the ring. Vdd straps are connected to the Vdd ring and the Gnd Straps are connected to the Gnd ring. There are horizontal and the vertical straps
+- Now the power has to be supplied from the straps to the standard cells. The straps are connected to the `rails` of the standard cells
+- If macros are present then the straps attach to the `rings` of the macros via the `macro pads` and the pdn for the macro is pre-done.
+- There are definitions for the straps and the railss. In this design straps are at metal layer 4 and 5 and the standard cell rails are at the metal layer 1. Vias connect accross the layers as required.
 - `run_routing` - To start the routing
+- The options for routing can be set in the `config.tcl` file. 
+- The optimisations in routing can also be done by specifying the routing strategy to use different version of `TritonRoute Engine`. There is a trade0ff between the optimised route and the runtime for routing.
+- For the default setting picorv32a takes approximately 30 minutesaccording to the current version of TritonRoute.
+- This routing stage must have the `CURRENT_DEF` set to `pdn.def`
 
 ![](./images/routing.PNG)
 
