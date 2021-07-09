@@ -651,6 +651,8 @@ Def file after CTS
 - The routing has been complted without any DRC violations.
 - RC Extraction is done and the SPEF File is generated in the `picorv32a/runs/03-07_16-12/results/routing/picorv32a.spef`
 - The routing guides produced in each stage of the routing is present in the `run/run_name/tmp/routing` directory
+- In the current version of OpenLane (Openlane 0.21), the SPEF Extractor is built-in. So on running the routing the Parasitics are extracted and Post-routing STA is performed.
+- In the older versions of openlane, the SPEF Extraction has to be done manually and the STA has to be performed in Openroad by creating a new db with the new `def` file and the appropriate verilog netlists.
 
 **Final DEF File after routing**
 
