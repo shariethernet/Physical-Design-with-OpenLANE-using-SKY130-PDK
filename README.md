@@ -650,6 +650,7 @@ Def file after CTS
 
 - The routing has been complted without any DRC violations.
 - RC Extraction is done and the SPEF File is generated in the `picorv32a/runs/03-07_16-12/results/routing/picorv32a.spef`
+- The routing guides produced in each stage of the routing is present in the `run/run_name/tmp/routing` directory
 
 **Final DEF File after routing**
 
